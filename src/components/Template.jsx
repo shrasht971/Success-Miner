@@ -1,74 +1,31 @@
-// src/Pages/Home.js
-import React, { useState, useEffect } from "react";
-import { HiOutlineLightBulb } from "react-icons/hi2";
+import React from "react";
 import Template from "../assets/Image/Hometemplate.jpg"; // Import your background image
 
 const Home = () => {
-  // const [isBulbOn, setIsBulbOn] = useState(false);
-  // const [bulbPosition, setBulbPosition] = useState(0);
-
-  // useEffect(() => {
-  //   const timeoutId = setTimeout(() => {
-  //     setIsBulbOn(true);
-  //   }, 1000);
-
-  //   return () => clearTimeout(timeoutId);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (isBulbOn) {
-  //     const intervalId = setInterval(() => {
-  //       setBulbPosition((prevPosition) => {
-  //         // Reset position if it exceeds 60 (example value)
-  //         return prevPosition >= 60 ? 0 : prevPosition + 1;
-  //       });
-  //     }, 10);
-
-  //     return () => clearInterval(intervalId);
-  //   }
-  // }, [isBulbOn]);
-
   return (
-    <div className="relative">
-      {/* Background Image */}
+    <div className="relative mb-10">
+      {/* Template Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${Template})`, height: "100vh" }}
+        className="h-[95vh] mt-[-25vh] md:-mt-44  object-cover bg-cover  bg-center "
+        style={{ backgroundImage: `url(${Template})` }}
       >
-        {/* Content inside background image */}
-        <div className="mt-56 h-full">
-          <div className="flex justify-between">
-            <div className="w-1/2 ml-6">
-              <h1 className="text-white text-4xl font-bold">
-                Transform Your Brand's Story: Embrace the Power of Digital
-                Marketing
-              </h1>
-              <p className="text-white text-xl font bold mt-4">
-                Digital marketing is a gradual and steady journey toward
-                success, requiring patience and care, especially in a market
-                like India. Expecting immediate growth from a startup app
-                development company can lead to disappointment. Instead, focus
-                on nurturing and strategically developing your digital marketing
-                efforts to build a strong foundation for future success.
-              </p>
-              <button className="mt-6 px-6 py-3 bg-teal-800 text-white font-semibold rounded-lg hover:bg-cyan-600 transition duration-300 ease-in-out">
-                BOOK FREE CONSULTANT
-              </button>
-            </div>
-            <div className="flex flex-col items-center justify-center h-96 bg-transparent w-96 relative">
-              {/* <div
-                className="relative w-80 h-80 bg-transparent flex items-end justify-center"
-                style={{ transform: `translateY(${bulbPosition}px)` }}
-              >
-                <HiOutlineLightBulb
-                  className={`text-white text-9xl  ${
-                    isBulbOn ? "animate-glow" : ""
-                  }`}
-                />
-              </div> */}
-              <div className="mt-8 text-white font-bold">CREATES IDEAS</div>
-              <div className="mt-2 text-sm text-gray-400">NEURONVISUALS</div>
-            </div>
+        {/* Content inside template background image */}
+        <div className="flex flex-col custom-md:flex-row justify-between items-center h-full px-4 custom-md:px-6 custom-lg:px-10">
+          <div className="w-full custom-md:w-1/2 text-center custom-md:text-left px-4 custom-md:px-6">
+            <h1 className="text-white text-md custom-sm:text-lg custom-md:text-xl custom-lg:text-2xl lg:text-3xl font-semibold custom-md:font-bold leading-tight mt-20 custom-md:mt-32 custom-lg:mt-[-10vh] md:mt-44 lg:mt-40 ">
+              Transform Your Brand's Story: Embrace the Power of Digital Marketing
+            </h1>
+            <p className="text-white text-sm custom-sm:text-base custom-md:text-lg custom-lg:text-xl py-2 custom-md:py-4">
+              Digital marketing is a gradual and steady journey toward success,
+              requiring patience and care, especially in a market like India.
+              Expecting immediate growth from a startup app development company
+              can lead to disappointment. Instead, focus on nurturing and
+              strategically developing your digital marketing efforts to build a
+              strong foundation for future success.
+            </p>
+            <button className="mt-6 text-sm custom-md:text-base px-4 custom-md:px-6 py-2 custom-md:py-3 bg-teal-800 text-white font-semibold rounded-lg hover:bg-cyan-700 transition duration-300 ease-in-out">
+              BOOK FREE CONSULTATION
+            </button>
           </div>
         </div>
       </div>

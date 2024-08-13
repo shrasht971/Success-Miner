@@ -1,8 +1,11 @@
 // Performance.js
 import React from 'react';
+import OurPerformance from '../components/OurPerformance';
 
 const Performance = () => {
-  return <h1>Our Performance</h1>;
+  return<>
+    <OurPerformance/>
+  </>
 };
 
 export default Performance;

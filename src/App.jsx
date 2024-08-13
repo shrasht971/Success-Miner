@@ -7,6 +7,7 @@ import Performance from "./Pages/Performance";
 import Service from "./Pages/Service";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Footer from "./Footer/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
