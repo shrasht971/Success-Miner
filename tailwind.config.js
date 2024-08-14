@@ -28,7 +28,7 @@ module.exports = {
         'xl': '1280px', // Extra large screens
         '2xl': '1536px', // Extra extra large screens
         // Custom breakpoints
-        'custom-sm': '480px', // Custom small breakpoint
+        'custom-sm': '144px', // Custom small breakpoint
         'custom-md': '960px', // Custom medium breakpoint
         'custom-lg': '1440px', // Custom large breakpoint
         // Add more custom breakpoints as needed
