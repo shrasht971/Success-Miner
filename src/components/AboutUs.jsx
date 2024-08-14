@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div>
       {/* Video Background Section */}
-      <div className="relative h-[74vh] w-full">
+      <div className="relative h-[74vh] mt-[-20vh] md:mt-[-29vh] w-full">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src={Template}

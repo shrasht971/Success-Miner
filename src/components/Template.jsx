@@ -11,7 +11,7 @@ const Home = () => {
       >
         {/* Content inside template background image */}
         <div className="flex flex-col custom-md:flex-row justify-between items-center h-full px-4 custom-md:px-6 custom-lg:px-10">
-          <div className="w-full custom-md:w-1/2 text-center custom-md:text-left px-4 custom-md:px-6">
+          <div className="w-full mt-16 custom-md:w-1/2 text-center custom-md:text-left px-4 custom-md:px-6">
             <h1 className="text-white text-md custom-sm:text-lg custom-md:text-xl custom-lg:text-2xl lg:text-3xl font-semibold custom-md:font-bold leading-tight mt-20 custom-md:mt-32 custom-lg:mt-[-10vh] md:mt-44 lg:mt-40 ">
               Transform Your Brand's Story: Embrace the Power of Digital Marketing
             </h1>

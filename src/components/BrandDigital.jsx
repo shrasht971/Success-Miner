@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
-import { WOW } from 'wowjs';
+import React from 'react';
 import 'animate.css';
 import Digital from '../assets/Image/digitalmarketing.jpg';
 import { FaFlag, FaUsers, FaThumbsUp, FaUser } from 'react-icons/fa';
 
 const BrandDigital = () => {
-  useEffect(() => {
-    new WOW().init();
-  }, []);
+
 
   return (
     <div className="bg-gray-100 p-4 md:p-8 flex flex-col md:flex-row justify-around items-center">
       {/* Image Section */}
-      <div className="w-full md:w-1/2 mb-8 md:mb-0 wow animate__animated animate__fadeInLeft">
+      <div className="w-full md:w-1/2 mb-8 md:mb-0">
         <img src={Digital} alt="Marketing" className="w-full" />
         <div className="bg-blue-950 text-white text-md px-2 font-bold">
           <h1 className='text-yellow-400 text-lg'>Why Choose Us?</h1>
@@ -27,7 +24,7 @@ const BrandDigital = () => {
       </div>
 
       {/* Statistics Section */}
-      <div className="w-full md:w-1/2 p-4 md:p-8 wow animate__animated animate__fadeInRight">
+      <div className="w-full md:w-1/2 p-4 md:p-8 ">
         <h3 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">
           Grow Your Brand with Strategic Digital Marketing
         </h3>
@@ -36,22 +33,22 @@ const BrandDigital = () => {
         </p>
 
         <div className="grid grid-cols-2 gap-4 md:gap-8">
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center wow animate__animated animate__fadeInUp">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center">
             <FaFlag className="w-8 h-8 md:w-12 md:h-12 text-blue-500 mb-2" />
             <div className="text-2xl md:text-4xl font-bold">512+</div>
             <div className="text-xs md:text-sm">Successfully Project Finished.</div>
           </div>
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center wow animate__animated animate__fadeInUp" data-wow-delay="1s">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center " >
             <FaUsers className="w-8 h-8 md:w-12 md:h-12 text-green-500 mb-2" />
             <div className="text-2xl md:text-4xl font-bold">2+</div>
             <div className="text-xs md:text-sm">Years of experience with pride</div>
           </div>
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center wow animate__animated animate__fadeInUp" data-wow-delay="2s">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center" >
             <FaThumbsUp className="w-8 h-8 md:w-12 md:h-12 text-yellow-500 mb-2" />
             <div className="text-2xl md:text-4xl font-bold">99.9%</div>
             <div className="text-xs md:text-sm">Satisfied Clients</div>
           </div>
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center wow animate__animated animate__fadeInUp" data-wow-delay="3s">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-md text-center flex flex-col items-center" >
             <FaUser className="w-8 h-8 md:w-12 md:h-12 text-red-500 mb-2" />
             <div className="text-2xl md:text-4xl font-bold">11.5k</div>
             <div className="text-xs md:text-sm">Clients</div>

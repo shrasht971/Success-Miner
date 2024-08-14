@@ -2,6 +2,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      maxHeight: {
+        '90vh': '90vh',
+      },
       animation: {
         glow: "glow 2s ease-in-out infinite",
       },

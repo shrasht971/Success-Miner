@@ -69,30 +69,30 @@ const services = [
 
 const ServiceTemplate = () => {
   return (
-    <div className="relative mt-[-40%] md:mt-[-25%] lg:mt-[-12%]">
+    <div className="relative mt-[-25vh] custom-sm:mt-[-30vh] custom-md:mt-[-20vh] custom-lg:mt-[-15vh] lg:mt-[-22vh] ">
       <img
         src={ServiceImg}
         alt="Service"
-        className="w-full h-[75vh] object-cover"
+        className="w-full h-[70vh] object-cover"
       />
-      <h1 className="absolute inset-0 flex items-center justify-center text-gray-700 text-5xl md:text-8xl bg-blend-saturationd mt-[-600vh] md:mt-[-270vh] lg:mt-[-115%] font-bold">
+      <h1 className="absolute inset-0 flex items-center justify-center text-gray-700 text-4xl custom-sm:text-8xl custom-md:text-6xl custom-lg:text-9xl custom-lg:mt-[-150vh] font-bold bg-blend-saturation  max-custom-lg:mt-[-660vh] max-custom-lg:text-6xl custom-sm:mt-[-622vh] lg:mt-[-330vh] lg:text-8xl">
         SERVICES
       </h1>
-      <div className="mt-10 px-6">
+      <div className="px-4 custom-sm:px-6 custom-md:px-8 custom-lg:px-10">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          <h3 className="text-2xl font-semibold text-gray-600 mb-8">Quality Services</h3>
+          <h2 className="text-3xl custom-sm:text-4xl custom-md:text-5xl font-bold mb-4">Our Services</h2>
+          <h3 className="text-xl custom-sm:text-2xl custom-md:text-3xl font-semibold text-gray-600 mb-8">Quality Services</h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 custom-md:grid-cols-2 custom-lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6">
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-20 md:h-48 lg:h-56 object-cover rounded-md mb-4 "
+                className="w-full h-40 custom-md:h-48 custom-lg:h-56 object-cover rounded-md mb-4"
               />
-              <h4 className="md:text-xl font-bold mb-2">{service.title}</h4>
-              <p className="text-gray-700 text-sm mb-2">{service.description}</p>
+              <h4 className="text-xl custom-md:text-2xl font-bold mb-2">{service.title}</h4>
+              <p className="text-gray-700 text-sm custom-md:text-base mb-2">{service.description}</p>
               <button className="text-teal-800 font-semibold hover:underline">
                 Read More
               </button>
@@ -105,3 +105,4 @@ const ServiceTemplate = () => {
 };
 
 export default ServiceTemplate;
+ 

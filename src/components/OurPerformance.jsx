@@ -13,7 +13,7 @@ const OurPerformance = () => {
   return (
     <div>
       {/* Main background video */}
-      <div className="relative h-[75vh] w-full">
+      <div className="relative h-[75vh] mt-[-20vh] md:mt-[-30vh] w-full">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src={backgroundVideo}
