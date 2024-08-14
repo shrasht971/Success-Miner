@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="relative w-full bg-opacity-80 py-3 z-20 shadow-md">
-        <div className="container mx-auto px-4 py-2 flex items-center justify-evenly">
+        <div className="container mx-auto px-4 py-2 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center flex-grow">
             <img src={Logo} alt="Logo" className="h-16 w-32" />
@@ -76,35 +76,35 @@ const Navbar = () => {
         </div>
         {/* Mobile Navigation Menu */}
         {menuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-white shadow-md z-10">
-            <div className="flex flex-col items-center space-y-4 px-4 py-2">
+          <div className="absolute top-16 left-0 right-0 bg-transparent h-16 shadow-md z-10">
+            <div className="flex flex-col items-center space-y-4 px-4 py-1">
               <NavLink 
                 to="/" 
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+                className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Home
               </NavLink>
               <NavLink 
                 to="/performance" 
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+                className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Our Performance
               </NavLink>
               <NavLink 
                 to="/service" 
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+                className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Service
               </NavLink>
               <NavLink 
                 to="/about" 
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+                className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 About
               </NavLink>
               <NavLink 
                 to="/contact" 
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+                className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Contact Us
               </NavLink>
@@ -117,7 +117,7 @@ const Navbar = () => {
               </a>
               <a
                 href="https://wa.me/9719900723"
-                className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+                className="bg-green-500 text-white px-4 py-1 rounded-lg hover:bg-green-600"
               >
                 WhatsApp Now
               </a>

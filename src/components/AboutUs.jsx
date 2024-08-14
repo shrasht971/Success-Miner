@@ -23,9 +23,9 @@ const AboutUs = () => {
       </div>
 
       {/* New Section Divided into Two Columns */}
-      <div className="container mx-auto p-2 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-cyan-700 p-4 rounded-lg shadow-md">
-          <div>
+      <div className="w-full px-4 py-8 md:px-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-cyan-700 p-4 rounded-lg shadow-md">
             <h2 className="font-bold text-2xl">About Us: Who We Are</h2>
             <div className="text-white text-md font-semibold mt-4 mb-4">
               <p>
@@ -81,16 +81,16 @@ const AboutUs = () => {
               Our Service
             </button>
           </div>
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          {/* Video in Right Column */}
-          <video
-            className="w-full h-auto rounded-lg shadow-md"
-            src={AboutRight}
-            autoPlay
-            loop
-            muted
-          />
+          <div className="bg-white p-4 rounded-lg shadow-md">
+            {/* Video in Right Column */}
+            <video
+              className="w-full h-auto rounded-lg shadow-md"
+              src={AboutRight}
+              autoPlay
+              loop
+              muted
+            />
+          </div>
         </div>
       </div>
     </div>
