@@ -69,15 +69,15 @@ const services = [
 
 const ServiceTemplate = () => {
   return (
-    <div className="relative mt-[-25vh] custom-sm:mt-[-30vh] custom-md:mt-[-20vh] custom-lg:mt-[-15vh] lg:mt-[-22vh] ">
+    <div className="relative mt-[-25vh]  custom-sm:mt-[-30vh] custom-md:mt-[-20vh] custom-lg:mt-[-15vh] lg:mt-[-22vh] ">
       <img
         src={ServiceImg}
         alt="Service"
         className="w-full h-[70vh] object-cover"
       />
-      <h1 className="absolute inset-0 flex items-center justify-center text-gray-700 text-4xl custom-sm:text-8xl custom-md:text-6xl custom-lg:text-9xl custom-lg:mt-[-150vh] font-bold bg-blend-saturation  max-custom-lg:mt-[-660vh] max-custom-lg:text-6xl custom-sm:mt-[-622vh] lg:mt-[-330vh] lg:text-8xl">
+      <div className="absolute inset-0 flex items-center justify-center text-gray-700 text-4xl sm:mt-[-672vh] custom-sm:text-5xl custom-md:text-6xl custom-lg:text-9xl md:mt-[-620vh] md:text-7xl custom-lg:mt-[-200vh] 3xl:mt-[-100vh] 3xl:text-9xl font-bold bg-blend-saturation   max-custom-lg:mt-[-660vh] max-custom-lg:text-6xl custom-sm:mt-[-722vh] lg:mt-[-430vh] lg:text-8xl">
         SERVICES
-      </h1>
+      </div>
       <div className="px-4 custom-sm:px-6 custom-md:px-8 custom-lg:px-10">
         <div className="text-center">
           <h2 className="text-3xl custom-sm:text-4xl custom-md:text-5xl font-bold mb-4">Our Services</h2>

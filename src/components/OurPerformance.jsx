@@ -13,7 +13,7 @@ const OurPerformance = () => {
   return (
     <div>
       {/* Main background video */}
-      <div className="relative h-[75vh] mt-[-20vh] md:mt-[-30vh] w-full">
+      <div className="relative h-[75vh] mt-[-20vh] md:mt-[-30vh] ">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src={backgroundVideo}
@@ -40,7 +40,7 @@ const OurPerformance = () => {
         />
 
         {/* Cards container */}
-        <div className="relative container mx-auto p-4 z-10">
+        <div className="relative container mx-auto max-w-full p-4 z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <VideoCard videoSrc={payperclick} title1="Pay Per Click" title2="Pay Per Click" />
             <VideoCard videoSrc={topsoftwaredev} title1="Top" title2="Software Development" />

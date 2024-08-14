@@ -55,7 +55,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="w-full px-4 py-12">
       {/* Trending Digital Marketing Services */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center">
         Trending Digital Marketing Services
