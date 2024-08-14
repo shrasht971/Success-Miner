@@ -116,7 +116,7 @@ const Navbar = () => {
                 <span className="font-bold">successminer777@gmail.com</span>
               </a>
               <a
-                href="https://wa.me/9719900723"
+                href="https://wa.me/"
                 className="bg-green-500 text-white px-4 py-1 rounded-lg hover:bg-green-600"
               >
                 WhatsApp Now
