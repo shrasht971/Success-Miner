@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="relative w-full bg-opacity-80 py-3 px-4 md:px-10 lg:px-20 z-20 shadow-md">
+      <nav className="relative w-full bg-opacity-80 py-3 px-4 md:px-1 lg:px-2 lg:pr-3 z-20 shadow-md">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
@@ -25,50 +25,50 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <div className="hidden md:flex items-center space-x-1 md:text-sm md:font-light  lg:space-x-6">
             <NavLink
               to="/"
-              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+              className={({ isActive }) => `px-4 py-2 md:px-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
             >
               Home
             </NavLink>
             <NavLink
               to="/performance"
-              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+              className={({ isActive }) => `px-4 py-2 md:px-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
             >
               Our Performance
             </NavLink>
             <NavLink
               to="/service"
-              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+              className={({ isActive }) => `px-4 py-2 md:px-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
             >
               Service
             </NavLink>
             <NavLink
               to="/about"
-              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+              className={({ isActive }) => `px-4 py-2 md:px-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
             >
               About
             </NavLink>
             <NavLink
               to="/contact"
-              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+              className={({ isActive }) => `px-4 py-2 md:px-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
             >
               Contact Us
             </NavLink>
           </div>
 
           {/* Desktop Email and Search */}
-          <div className="hidden md:flex items-center space-x-4 text-cyan-600">
+          <div className="hidden md:flex items-center space-x-1 md:text-sm text-cyan-600">
             <a
               href="mailto:successminer777@gmail.com"
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-1"
             >
-              <EnvelopeIcon className="h-5 w-5" />
+              <EnvelopeIcon className="h-5 w-5 md:h-4  " />
               <span>successminer777@gmail.com</span>
             </a>
             <button onClick={() => setSearchOpen(!searchOpen)}>
-              <MagnifyingGlassIcon className="h-5 w-5" />
+              <MagnifyingGlassIcon className="h-5 w-5 md:h-4" />
             </button>
           </div>
         </div>
