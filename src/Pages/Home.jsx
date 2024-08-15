@@ -6,9 +6,11 @@ import ServicesSection from '../components/ServicesSection';
 import {Link} from 'react-router-dom'
 const Home = () => {
   return <>
+  <div className='w-full'>
       <Template/>
       <BrandDigital/>
       <ServicesSection />
+      </div>
   </>
 };
 
