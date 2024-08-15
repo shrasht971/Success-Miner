@@ -17,93 +17,99 @@ const Navbar = () => {
           </div>
 
           {/* Toggle Button for Mobile */}
-          <button 
-            onClick={() => setMenuOpen(!menuOpen)} 
-            className="md:hidden text-cyan-600 flex-shrink-0 ml-auto"
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="absolute top-4 right-4 md:hidden text-cyan-600 flex-shrink-0"
           >
             <Bars3Icon className="h-6 w-6" />
           </button>
+
+          {/* Desktop Navigation Links */}
+        
+          <div className="hidden md:flex items-center justify-between space-x-6">
+            <NavLink
+              to="/"
+              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/performance"
+              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+            >
+              Our Performance
+            </NavLink>
+            <NavLink
+              to="/service"
+              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+            >
+              Service
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
+            >
+              Contact Us
+            </NavLink>
+          </div>
+
+          {/* Desktop Email and Search */}
+          <div className="hidden md:flex items-center space-x-4 md:text-sm lg:text-md">
+            <a
+              href="mailto:successminer777@gmail.com"
+              className="flex items-center space-x-2 text-cyan-600"
+            >
+              <EnvelopeIcon className="h-5 w-5" />
+              <span className="font-bold">successminer777@gmail.com</span>
+            </a>
+            <button onClick={() => setSearchOpen(!searchOpen)} className="text-cyan-600">
+              <MagnifyingGlassIcon className="h-5 w-5" />
+            </button>
+          </div>
         </div>
 
-        {/* Desktop Navigation Links */}
-        <div className='flex justify-between md:text-sm'>
-        <div className="hidden md:flex items-center justify-between md:space-x-1 space-x-6">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-          >
-            Home
-          </NavLink>
-          <NavLink 
-            to="/performance" 
-            className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-          >
-            Our Performance
-          </NavLink>
-          <NavLink 
-            to="/service" 
-            className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-          >
-            Service
-          </NavLink>
-          <NavLink 
-            to="/about" 
-            className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-          >
-            About
-          </NavLink>
-          <NavLink 
-            to="/contact" 
-            className={({ isActive }) => `px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-          >
-            Contact Us
-          </NavLink>
-        </div>
-
-        {/* Desktop Email and Search */}
-        <div className="hidden md:flex items-center space-x-4 md:text-sm lg:text-md">
-          <a
-            href="mailto:successminer777@gmail.com"
-            className="flex items-center space-x-2 text-cyan-600"
-          >
-            <EnvelopeIcon className="h-5 w-5" />
-            <span className="font-bold">successminer777@gmail.com</span>
-          </a>
-          <button onClick={() => setSearchOpen(!searchOpen)} className="text-cyan-600">
-            <MagnifyingGlassIcon className="h-5 w-5" />
-          </button>
-        </div>
-        </div>
-        {/* Mobile Navigation Menu */}
+        {/* Overlay Navigation */}
         {menuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-transparent h-16 shadow-md z-10">
-            <div className="flex flex-col items-center space-y-4 px-4 py-1">
-              <NavLink 
-                to="/" 
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-30 h-[55vh] transition-transform duration-500">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-5 right-5 text-white text-4xl"
+            >
+              &times;
+            </button>
+            <div className="flex flex-col items-center justify-center h-[44vh] mt-14 text-white text-lg  space-y-1">
+              <NavLink
+                to="/"
                 className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Home
               </NavLink>
-              <NavLink 
-                to="/performance" 
+              <NavLink
+                to="/performance"
                 className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Our Performance
               </NavLink>
-              <NavLink 
-                to="/service" 
+              <NavLink
+                to="/service"
                 className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Service
               </NavLink>
-              <NavLink 
-                to="/about" 
+              <NavLink
+                to="/about"
                 className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 About
               </NavLink>
-              <NavLink 
-                to="/contact" 
+              <NavLink
+                to="/contact"
                 className={({ isActive }) => `block px-4 py-1 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
               >
                 Contact Us
@@ -113,11 +119,11 @@ const Navbar = () => {
                 className="flex items-center space-x-2 text-cyan-600"
               >
                 <EnvelopeIcon className="h-5 w-5" />
-                <span className="font-bold">successminer777@gmail.com</span>
+                <span className="font-semibold">successminer777@gmail.com</span>
               </a>
               <a
                 href="https://wa.me/"
-                className="bg-green-500 text-white px-4 py-1 rounded-lg hover:bg-green-600"
+                className="bg-green-500 text-white px-4 py-1 rounded-lg font-semibold  hover:bg-green-600"
               >
                 WhatsApp Now
               </a>
