@@ -29,7 +29,7 @@ module.exports = {
         '2xl': '1536px', // Extra extra large screens
         '3xl':'2560px',
         // Custom breakpoints
-        'custom-sm': '144px', // Custom small breakpoint
+        'custom-sm': '320px', // Custom small breakpoint
         'custom-md': '960px', // Custom medium breakpoint
         'custom-lg': '1440px', // Custom large breakpoint
         // Add more custom breakpoints as needed
