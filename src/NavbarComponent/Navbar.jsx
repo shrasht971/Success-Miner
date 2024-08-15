@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Logo from '../assets/Image/Logo-removebg-preview.png';
 import { EnvelopeIcon, MagnifyingGlassIcon, Bars3Icon } from '@heroicons/react/24/outline';
 
 const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavLinkClick = (path) => {
+    navigate(path);
+    setMenuOpen(false);
+  };
 
   return (
     <>
-      <nav className="relative w-full bg-opacity-80 py-3 px-4 md:px-1 lg:px-2 lg:pr-3 z-20 shadow-md">
+      <nav className="relative w-full bg-opacity-80 py-3 px-4 md:px-1 lg:bg-transparent custom-sm:bg-black bg-black sm:bg-black md:bg-transparent lg:px-2 lg:pr-3 z-20 shadow-md">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
@@ -83,36 +89,21 @@ const Navbar = () => {
               &times;
             </button>
             <div className="flex flex-col items-center justify-center h-full space-y-4 text-white text-lg">
-              <NavLink
-                to="/"
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-              >
+              <button onClick={() => handleNavLinkClick('/')}>
                 Home
-              </NavLink>
-              <NavLink
-                to="/performance"
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-              >
+              </button>
+              <button onClick={() => handleNavLinkClick('/performance')}>
                 Our Performance
-              </NavLink>
-              <NavLink
-                to="/service"
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-              >
+              </button>
+              <button onClick={() => handleNavLinkClick('/service')}>
                 Service
-              </NavLink>
-              <NavLink
-                to="/about"
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-              >
+              </button>
+              <button onClick={() => handleNavLinkClick('/about')}>
                 About
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) => `block px-4 py-2 rounded ${isActive ? 'bg-teal-800 text-white' : 'text-cyan-400 hover:text-teal-800'} font-bold transition-colors duration-300`}
-              >
+              </button>
+              <button onClick={() => handleNavLinkClick('/contact')}>
                 Contact Us
-              </NavLink>
+              </button>
               <a
                 href="mailto:successminer777@gmail.com"
                 className="flex items-center space-x-2 text-cyan-600"
