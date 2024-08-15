@@ -81,14 +81,14 @@ const Navbar = () => {
 
         {/* Overlay Navigation */}
         {menuOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 z-30 h-screen">
+          <div className="fixed inset-0 bg-black h-[55vh] bg-opacity-90 z-30 ">
             <button
               onClick={() => setMenuOpen(false)}
               className="absolute top-5 right-5 text-white text-4xl"
             >
               &times;
             </button>
-            <div className="flex flex-col items-center justify-center h-full space-y-4 text-white text-lg">
+            <div className="flex flex-col items-center justify-center h-[44vh] mt-11 space-y-4 text-white text-lg">
               <button onClick={() => handleNavLinkClick('/')}>
                 Home
               </button>
