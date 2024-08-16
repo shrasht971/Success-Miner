@@ -63,7 +63,7 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-bold mb-4">Our Locations</h2>
             <address className="not-italic text-sm">
-              2236/16 Shiv kripa society, Arjunwadi Ghansoli Gaon, Navi Mumbai 400701
+              Dawarka,Delhi
             </address>
           </div>
         </div>
@@ -87,9 +87,8 @@ const Footer = () => {
             <h2 className="text-xl font-bold mb-4">Our Services</h2>
             <ul className="text-sm space-y-2">
               <li>Search Engine Optimization</li>
-              <li>Software Development</li>
-              <li>Graphics Designing</li>
               <li>Website Designing</li>
+              <li>Web Development</li>
               <li>Social Media Marketing</li>
               <li>Contact Us</li>
               <li>About</li>
@@ -101,17 +100,14 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-bold mb-4">Development</h2>
             <ul className="text-sm space-y-2">
-              <li>IOS App Development</li>
-              <li>Android App Development</li>
               <li>Website Development Services</li>
-              <li>Mobile App Development</li>
               <li>eCommerce Website Development</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 text-center text-sm">
-          &copy; 2024 adsgallery.in | All Rights Reserved
+          &copy; 2024 successminer.in | All Rights Reserved
         </div>
       </div>
     </footer>

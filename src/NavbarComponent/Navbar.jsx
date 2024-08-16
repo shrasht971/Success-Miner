@@ -81,7 +81,7 @@ const Navbar = () => {
 
         {/* Overlay Navigation */}
         {menuOpen && (
-          <div className="fixed inset-0 bg-black h-[55vh] bg-opacity-90 z-30 ">
+          <div className="fixed inset-0 bg-black h-[72vh] bg-opacity-90 z-30 ">
             <button
               onClick={() => setMenuOpen(false)}
               className="absolute top-5 right-5 text-white text-4xl"
@@ -112,7 +112,7 @@ const Navbar = () => {
                 <span>successminer777@gmail.com</span>
               </a>
               <a
-                href="https://wa.me/"
+                href="https://wa.me/8059608123"
                 className="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600"
               >
                 WhatsApp Now

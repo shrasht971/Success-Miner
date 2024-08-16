@@ -1,5 +1,6 @@
 import React from "react";
 import Template from "../assets/Image/Hometemplate.jpg"; // Import your background image
+import 'animate.css';
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
         style={{ backgroundImage: `url(${Template})` }}
       >
         {/* Content inside template background image */}
-        <div className="flex flex-col md:flex-row justify-between items-center h-full px-4 md:px-6 lg:px-10">
+        <div className="flex flex-col md:flex-row justify-between items-center h-full px-4 md:px-6 lg:px-10 animate__animated animate__backInLeft">
           <div className="w-full mt-[-4vh] md:w-1/2 sm:mt-0 md:mt-18 text-center md:text-left px-4 md:px-6">
             <h1 className="text-white text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold md:font-bold leading-tight mt-[30vh] md:mt-32 lg:mt-40">
               Transform Your Brand's Story: Embrace the Power of Digital Marketing

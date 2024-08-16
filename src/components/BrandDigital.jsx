@@ -9,7 +9,7 @@ const BrandDigital = () => {
   return (
     <div className="bg-gray-100 p-4 md:p-8 flex flex-col md:flex-row justify-around items-center">
       {/* Image Section */}
-      <div className="w-full md:w-1/2 mb-8 md:mb-0">
+      <div className="w-full md:w-1/2 mb-8 md:mb-0 animate__animated animate__backInLeft">
         <img src={Digital} alt="Marketing" className="w-full" />
         <div className="bg-blue-950 text-white text-md px-2 font-bold">
           <h1 className='text-yellow-400 text-lg'>Why Choose Us?</h1>
@@ -24,7 +24,7 @@ const BrandDigital = () => {
       </div>
 
       {/* Statistics Section */}
-      <div className="w-full md:w-1/2 p-4 md:p-8 ">
+      <div className="w-full md:w-1/2 p-4 md:p-8 animate__animated animate__backInRight ">
         <h3 className="text-xl md:text-2xl font-bold mb-4 text-center md:text-left">
           Grow Your Brand with Strategic Digital Marketing
         </h3>
