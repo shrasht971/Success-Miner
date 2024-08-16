@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import LeadGeneration from '../assets/Image/LeadGeneration.jpg';
 import Advertisement from '../assets/Image/Advertisement.jpg';
 import SocialMedia from '../assets/Image/SocialMedia.jpg';
@@ -8,55 +9,51 @@ import GraphicDesign from '../assets/Image/GraphicDesign.png';
 import Ads from '../assets/Image/ads2.jpg';
 import Agency from '../assets/Image/Agency.jpg';
 import { FaCheckCircle, FaClock, FaCog, FaMobileAlt } from 'react-icons/fa';
+import 'animate.css';
 
 const ServicesSection = () => {
-  // Service details for "Trending Digital Marketing Services"
+  const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [ref3, inView3] = useInView({ triggerOnce: true, threshold: 0.2 });
+
   const trendingServices = [
     {
       title: 'Lead Generation',
-      description:
-        'Generating high-quality leads is crucial for any business. At ADS Gallery, we employ proven strategies to attract leads that are most likely to convert into customers, helping you grow your business efficiently.',
+      description: 'Generating high-quality leads is crucial for any business...',
       image: LeadGeneration,
     },
     {
       title: 'Advertisement - Facebook(Meta) /Google',
-      description:
-        'With expertise in managing Google Ads and Facebook Ads, we ensure your advertisements reach the right audience at the right time, maximizing your return on investment.',
+      description: 'With expertise in managing Google Ads and Facebook Ads...',
       image: Advertisement,
     },
     {
       title: 'Social Media Marketing',
-      description:
-        'Engage with your audience on platforms like Facebook, Instagram, Twitter, and more through our targeted social media marketing strategies to build brand awareness and drive traffic to your website.',
+      description: 'Engage with your audience on platforms like Facebook...',
       image: SocialMedia,
     },
   ];
 
-  // Service details for "Our Quality Services"
   const qualityServices = [
     {
       title: 'Website Development',
-      description:
-        'A visually appealing and functional website is essential for online success. Our team of experienced developers will create a responsive website that reflects your brand and converts visitors into customers.',
+      description: 'A visually appealing and functional website is essential...',
       image: WebsiteDevelopment,
     },
     {
       title: 'SEO/SEM',
-      description:
-        'Boost your online visibility with our search engine optimization (SEO) and search engine marketing (SEM) services. We optimize your website to rank higher in search engine results, increasing organic traffic and conversions.',
+      description: 'Boost your online visibility with our SEO and SEM services...',
       image: SEO,
     },
     {
       title: 'Graphic Design',
-      description:
-        'Visual elements play a crucial role in branding and marketing efforts. Our skilled graphic designers create stunning visuals that embody your brand identity and captivate your audience.',
+      description: 'Visual elements play a crucial role in branding...',
       image: GraphicDesign,
     },
   ];
 
   return (
-    <div className="w-full px-4 py-12 animate__animated animate__bounceIn">
-      {/* Trending Digital Marketing Services */}
+    <div className="w-full px-4 py-12">
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center">
         Trending Digital Marketing Services
       </h1>
@@ -66,7 +63,13 @@ const ServicesSection = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
         {trendingServices.map((service, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+          <div
+            ref={ref1}
+            key={index}
+            className={`bg-white p-6 rounded-lg shadow-md text-center ${
+              inView1 ? 'animate__animated animate__fadeInUp' : ''
+            }`}
+          >
             <img
               src={service.image}
               alt={service.title}
@@ -80,10 +83,15 @@ const ServicesSection = () => {
         ))}
       </div>
 
-      {/* Our Quality Services */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
         {qualityServices.map((service, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+          <div
+            ref={ref2}
+            key={index}
+            className={`bg-white p-6 rounded-lg shadow-md text-center ${
+              inView2 ? 'animate__animated animate__fadeInUp' : ''
+            }`}
+          >
             <img
               src={service.image}
               alt={service.title}
@@ -97,9 +105,13 @@ const ServicesSection = () => {
         ))}
       </div>
 
-      {/* Featured Services */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
-        <div className="relative shadow-md text-center">
+        <div
+          ref={ref3}
+          className={`relative shadow-md text-center ${
+            inView3 ? 'animate__animated animate__fadeInLeft' : ''
+          }`}
+        >
           <img
             src={Ads}
             alt="Ads Optimization"
@@ -109,12 +121,11 @@ const ServicesSection = () => {
             <h1 className="text-md sm:text-2xl md:text-3xl lg:text-4xl font-bold md:mb-4 text-blue-600">
               Optimization of Ads
             </h1>
-            <h2 className="text-md sm:text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold mb:1  md:mb-4">
+            <h2 className="text-md sm:text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold mb:1 md:mb-4">
               Taking care of the optimization requirements
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl md:px-4 md:py-2">
-              We post ads that are SEO friendly. As the package includes the responsibility of
-              optimizing the keywords, optimizing of ad copy, Keyword bid optimization, etc.
+              We post ads that are SEO friendly. As the package includes the responsibility of optimizing the keywords, optimizing of ad copy, Keyword bid optimization, etc.
             </p>
             <div className="flex justify-center">
               <button className="md:mt-4 bg-green-500 text-white md:py-2 px-4 rounded hover:bg-blue-600">
