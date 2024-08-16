@@ -75,7 +75,7 @@ const ServiceTemplate = () => {
         alt="Service"
         className="w-full h-[70vh] object-cover"
       />
-      <div className="absolute inset-0 flex items-center justify-center text-gray-700 text-4xl sm:mt-[-672vh] custom-sm:text-5xl custom-md:text-6xl custom-lg:text-9xl md:mt-[-620vh] md:text-7xl custom-lg:mt-[-200vh] 3xl:mt-[-100vh] 3xl:text-9xl font-bold bg-blend-saturation   max-custom-lg:mt-[-660vh] max-custom-lg:text-6xl custom-sm:mt-[-722vh] lg:mt-[-430vh] lg:text-8xl">
+      <div className="absolute inset-0 flex items-center justify-center text-gray-700 text-4xl sm:mt-[-672vh] custom-sm:text-5xl custom-md:text-6xl custom-lg:text-9xl md:mt-[-620vh] md:text-7xl custom-lg:mt-[-180vh] 3xl:mt-[-100vh] 3xl:text-9xl font-bold bg-blend-saturation   max-custom-lg:mt-[-660vh] max-custom-lg:text-6xl custom-sm:mt-[-722vh] lg:mt-[-310vh] lg:text-8xl">
         SERVICES
       </div>
       <div className="px-4 custom-sm:px-6 custom-md:px-8 custom-lg:px-10">

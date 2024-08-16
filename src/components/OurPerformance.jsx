@@ -15,34 +15,49 @@ gsap.registerPlugin(ScrollTrigger);
 
 const OurPerformance = () => {
   useEffect(() => {
-    // Animation for the heading
-    gsap.from('.performance-heading', {
-      scrollTrigger: {
-        trigger: '.performance-heading',
-        start: 'top 80%', // Start animation when heading enters 80% of the viewport
-        end: 'bottom 20%',
-        toggleActions: 'play none none none', // Play animation once
-        scrub: true,
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-    });
+    const mq = window.matchMedia("(min-width: 768px)"); // Check for screen width >= 768px
 
-    // Animation for video cards
-    gsap.from('.video-card', {
-      scrollTrigger: {
-        trigger: '.video-card',
-        start: 'bottom 90%', // Start animation when each card enters 90% of the viewport
-        end: 'top 90%',
-        toggleActions: 'play none none none', // Play animation once
-        scrub: true,
-        stagger: 0.3,
-      },
-      y: 100,
-      opacity: 0,
-      duration: 1.5,
-    });
+    const applyAnimations = () => {
+      if (mq.matches) {
+        // Desktop animations for the heading
+        gsap.from('.performance-heading', {
+          scrollTrigger: {
+            trigger: '.performance-heading',
+            start: 'top 80%', // Start animation when heading enters 80% of the viewport
+            end: 'bottom 20%',
+            toggleActions: 'play none none none', // Play animation once
+            scrub: true,
+          },
+          y: 50,
+          opacity: 0,
+          duration: 1,
+        });
+      } else {
+        // Mobile animations for the heading
+        gsap.from('.performance-heading', {
+          scrollTrigger: {
+            trigger: '.performance-heading',
+            start: 'top 90%',
+            end: 'bottom 10%',
+            toggleActions: 'play none none none',
+            scrub: true,
+          },
+          y: 30,
+          opacity: 0,
+          duration: 1,
+        });
+      }
+    };
+
+    // Apply animations initially
+    applyAnimations();
+
+    // Re-apply animations if the screen size changes
+    mq.addEventListener('change', applyAnimations);
+
+    return () => {
+      mq.removeEventListener('change', applyAnimations);
+    };
   }, []);
 
   return (
@@ -77,24 +92,12 @@ const OurPerformance = () => {
         {/* Cards container */}
         <div className="relative container mx-auto max-w-full p-4 z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="video-card">
-              <VideoCard videoSrc={payperclick} title1="Pay Per Click" title2="Pay Per Click" />
-            </div>
-            <div className="video-card">
-              <VideoCard videoSrc={topsoftwaredev} title1="Top" title2="Software Development" />
-            </div>
-            <div className="video-card">
-              <VideoCard videoSrc={branding} title1="Branding" title2="Strategies" />
-            </div>
-            <div className="video-card">
-              <VideoCard videoSrc={socialmedia} title1="Social Media" title2="Social Media Marketing" />
-            </div>
-            <div className="video-card">
-              <VideoCard videoSrc={website} title1="Website" title2="Website Development " />
-            </div>
-            <div className="video-card">
-              <VideoCard videoSrc={seo} title1="SEO Optimization" title2="Search Engine Optimization " />
-            </div>
+            <VideoCard videoSrc={payperclick} title1="Pay Per Click" title2="Pay Per Click" />
+            <VideoCard videoSrc={topsoftwaredev} title1="Top" title2="Software Development" />
+            <VideoCard videoSrc={branding} title1="Branding" title2="Strategies" />
+            <VideoCard videoSrc={socialmedia} title1="Social Media" title2="Social Media Marketing" />
+            <VideoCard videoSrc={website} title1="Website" title2="Website Development " />
+            <VideoCard videoSrc={seo} title1="SEO Optimization" title2="Search Engine Optimization " />
           </div>
         </div>
 
