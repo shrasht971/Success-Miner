@@ -112,7 +112,7 @@ const Navbar = () => {
                 <span>successminer777@gmail.com</span>
               </a>
               <a
-                href="https://wa.me/+918059608123"
+                href="https://wa.me/918059608123"
                 className="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600"
               >
                 WhatsApp Now
@@ -137,7 +137,7 @@ const Navbar = () => {
 
       {/* WhatsApp Button Fixed Position */}
       <a
-        href="https://wa.me/9719900723"
+        href="https://wa.me/919719900723"
         className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 z-30"
       >
         WhatsApp Now
