@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import React from 'react';
 import Logo from '../assets/Image/Logo-removebg-preview.png';
 import {
@@ -13,22 +12,23 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">                                                                                                                                    
+        {/* First Row: About, Follow Us, and Locations */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
-          <div className='flex'>
-          <img src={Logo} alt="Logo" className="h-16 w-32" />
+          <div className="flex flex-col md:flex-row items-start">
+            <img src={Logo} alt="Logo" className="h-16 w-32 mb-4 md:mb-0 md:mr-4" />
             <p className="text-sm">
               With the inspiration and compassion for digital marketing, Success Miner.in believes in
               instant action and execution. Thus, extending the hand of support to the upcoming
               generation’s entrepreneurs, we believe in cheering the slogan “Vocal for Local”
               germinating the new startup development ideas with proper techniques of digital
               marketing, we give wings to a software company for startups India in building their
-              own name in the online virtual world.                   
+              own name in the online virtual world.
             </p>
           </div>
 
           {/* Follow Us Section */}
-          <div>
+          <div className="flex flex-col items-start">
             <h2 className="text-xl font-bold mb-4">Follow Us</h2>
             <ul className="flex space-x-4 text-lg">
               <li>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Contact & Address Section */}
-          <div>
+          <div className="flex flex-col items-start">
             <h2 className="text-xl font-bold mb-4">Our Locations</h2>
             <address className="not-italic text-sm">
               Dawarka,Delhi
@@ -68,6 +68,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Second Row: Marketing, Services, and Development */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
           {/* Marketing Services Section */}
           <div>
@@ -106,6 +107,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="mt-8 text-center text-sm">
           &copy; 2024 successminer.in | All Rights Reserved
         </div>
